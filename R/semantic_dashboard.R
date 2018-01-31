@@ -37,7 +37,7 @@ dashboard_header <- function(..., color = "", inverted = FALSE, disable = FALSE)
     verify_value_allowed("color", ALLOWED_COLORS)
 
     inverted_value = get_inverted_class(inverted)
-    shiny::div(class = paste("ui top attached", inverted_value, color, " menu"),
+    shiny::div(class = paste("ui", inverted_value, color, "top fixed menu"),
                shiny::tags$a(id = "toggle_menu", class = "item", shiny::tags$i(class = "sidebar icon"), "Menu"),
                shiny::div(class = "right icon menu", ...)
     )
@@ -96,9 +96,10 @@ dashboard_sidebar <- function(..., side = "left", size = "", color = "", inverte
 
     display_type <- ifelse(center, "labeled icon", "")
     inverted_value = get_inverted_class(inverted)
-    shiny::div(id = "uisidebar", style = "min-height: 100vh",
-               class = paste("ui", size, side, color, ifelse(side %in% c("top", "bottom"), "", "vertical"),
-                             display_type, ifelse(visible, "visible", ""), inverted_value, "menu sidebar"), ...)
+    class <- paste("ui", size, side, color, ifelse(side %in% c("top", "bottom"), "", "vertical"),
+                   display_type, ifelse(visible, "visible", ""), inverted_value, "menu sidebar")
+
+    shiny::div(id = "uisidebar", style = "min-height: 100vh", class = class, ...)
   }
 }
 

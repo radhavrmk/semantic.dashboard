@@ -31,7 +31,7 @@ UI-side function for dynamic valueBox.
 }}
 
 \examples{
-\dontrun{
+\donttest{
 valueBoxOutput("value_box")
 
 output$value_box <- renderValueBox({

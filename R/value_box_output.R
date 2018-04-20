@@ -5,7 +5,7 @@
 #' @return A value box that can be passed to \code{\link[semantic.dashboard]{dashboardBody}}
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' valueBoxOutput("value_box")
 #'
 #' output$value_box <- renderValueBox({
@@ -37,7 +37,7 @@ infoBoxOutput <- value_box_output
 #' @return A dynamic valueBox that can be assigned to output.
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' valueBoxOutput("value_box")
 #'
 #' output$value_box <- renderValueBox({

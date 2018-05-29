@@ -16,7 +16,7 @@ License: MIT + file LICENSE
 Imports:
     utils,
     shiny (>= 0.12.1),
-    shiny.semantic (>= 0.1.2)
+    shiny.semantic (>= 0.2.0)
 Suggests:
     testthat,
     lintr,
